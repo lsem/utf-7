@@ -5,6 +5,11 @@
 #ifndef UTF7_H
 #define UTF7_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 #include <stddef.h>
 
 /* utf7_encode() special code points */
@@ -30,5 +35,10 @@ struct utf7 {
 void utf7_init(struct utf7 *, const char *indirect);
 int  utf7_encode(struct utf7 *, long codepoint);
 long utf7_decode(struct utf7 *);
+
+#ifdef __cplusplus
+}
+#endif
+
 
 #endif
